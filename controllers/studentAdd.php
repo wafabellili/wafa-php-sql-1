@@ -1,26 +1,18 @@
 <?php
-include "../config/db_connector.php";
+//importation des fichier
+include '../models/etudiant.php';
+
+//creation d'un objet
+$etudiant = new Etudiant();
 
 //récupération des données
-$cin = $_POST['cin'];
-$nom = $_POST['nom'];
-$prenom = $_POST['prenom'];
-$age = $_POST['age'];
-$email = $_POST['email'];
+$etudiant->cin = $_POST['cin'];
+$etudiant->nom = $_POST['nom'];
+$etudiant->prenom = $_POST['prenom'];
+$etudiant->age = $_POST['age'];
+$etudiant->email = $_POST['email'];
 
-//connexion a la base de donnée
-$base = connect_to_db();
+$etudiant->insert();
 
-//preparatiopn de la requette sql
-$requette = "insert into etudiant values ('$cin','$nom','$prenom',$age,'$email')";
 
-//insertion des données ( exec du requette )
-$nbligne = $base->exec($requette);
-
-//affichage resultat de l'insertion
-if ($nbligne == 1) {
-    echo "student inserted";
-}else{
-    echo "error";
-}
 ?>
