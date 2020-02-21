@@ -20,7 +20,7 @@ class Etudiant{
 
         //affichage resultat de l'insertion
         if ($nbligne == 1) {
-            echo "student inserted";
+            header('location:../views/studentsList.php');
         }else{
             echo "error";
         }
