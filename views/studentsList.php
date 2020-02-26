@@ -40,7 +40,7 @@
                     <td><?php echo $student->age ; ?></td>
                     <td><?php echo $student->email ; ?></td>
                     <td>
-                        <a class="btn btn-danger" href="../controllers/studentDelete.php?cin=<?php echo $student->cin ; ?>"><i class="far fa-trash-alt"></i></a>
+                        <a class="btn btn-danger" href="../controllers/studentController.php?event=delete&&cin=<?php echo $student->cin ; ?>"><i class="far fa-trash-alt"></i></a>
                         <a class="btn btn-warning" href="../views/studentUpdate.php?cin=<?php echo $student->cin ; ?>"><i class="far fa-edit"></i></a>
                     </td>
                 </tr>

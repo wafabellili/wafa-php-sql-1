@@ -72,7 +72,7 @@ class Etudiant{
 
     }
 
-    public function update($cin){
+    public function update(){
         //connexion a la base de donnée
         $base = connect_to_db();
 
@@ -82,7 +82,7 @@ class Etudiant{
                     prenom ='$this->prenom' ,
                     age = $this->age ,
                     email = '$this->email'
-                    where cin = '$cin'";
+                    where cin = '$this->cin'";
 
         //insertion des données ( exec du requette )
         $nbligne = $base->exec($requette);

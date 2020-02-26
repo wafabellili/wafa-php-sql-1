@@ -23,7 +23,7 @@
 
     ?>
      <div class="container">
-    <form method="POST" action="../controllers/studentUpdate.php?cin=<?php echo $student->cin?>">
+    <form method="POST" action="../controllers/studentController.php?event=update&&cin=<?php echo $student->cin?>">
     <div class="form-row">
             <div class="col-md-6">
                 <div class="form-group">

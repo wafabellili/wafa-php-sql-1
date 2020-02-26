@@ -14,7 +14,7 @@
     ?>
 
     <div class="container">
-        <form method="POST" action="../controllers/studentAdd.php">
+        <form method="POST" action="../controllers/studentController.php?event=add">
         
         <div class="form-row">
             <div class="col">
